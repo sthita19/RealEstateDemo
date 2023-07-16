@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1>Welcome to our Real Estate Website</h1>
+            <p>Find your dream home with us.</p>
+
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search by heading or location"
+                    oninput="filterListings()">
+                <div class="sort-container">
+                    <label for="sortSelect">Sort by Price:</label>
+                    <select id="sortSelect" onchange="sortByPrice(this.value)">
+                        <option value="asc">Low to High</option>
+                        <option value="desc">High to Low</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="property-list">
+                <div class="property">
+                    <img src="./images/property1.jpg" alt="Property 1">
+                    <h2>Property 1</h2>
+                    <p>Location: Location A</p>
+                    <p>Price: $500,000</p>
+                    <a href="listing.html?id=1" class="btn button">View Details</a>
+                </div>
+                <div class="property">
+                    <img src="./images/property2.jpg" alt="Property 2">
+                    <h2>Property 2</h2>
+                    <p>Location: Location B</p>
+                    <p>Price: $800,000</p>
+                    <a href="listing.html?id=2" class="btn button">View Details</a>
+                </div>
+                <div class="property">
+                    <img src="./images/property3.jpg" alt="Property 3">
+                    <h2>Property 3</h2>
+                    <p>Location: Lorem ipsum dolor sit amet</p>
+                    <p>Price: $350,000</p>
+                    <a href="listing.html?id=3" class="btn button">View Details</a>
+                </div>
+                <div class="property">
+                    <img src="./images/property4.jpg" alt="Property 4">
+                    <h2>Property 4</h2>
+                    <p>Location: Lorem ipsum dolor sit amet</p>
+                    <p>Price: $600,000</p>
+                    <a href="listing.html?id=4" class="btn button">View Details</a>
+                </div>
+                <div class="property">
+                    <img src="./images/property5.jpg" alt="Property 5">
+                    <h2>Property 5</h2>
+                    <p>Location: Lorem ipsum dolor sit amet</p>
+                    <p>Price: $450,000</p>
+                    <a href="listing.html?id=5" class="btn button">View Details</a>
+                </div>
+                <div class="property">
+                    <img src="./images/property6.jpg" alt="Property 6">
+                    <h2>Property 6</h2>
+                    <p>Location: Lorem ipsum dolor sit amet</p>
+                    <p>Price: $700,000</p>
+                    <a href="listing.html?id=6" class="btn button">View Details</a>
+                </div>
+                <div class="property">
+                    <img src="./images/property7.jpg" alt="Property 7">
+                    <h2>Property 7</h2>
+                    <p>Location: Lorem ipsum dolor sit amet</p>
+                    <p>Price: $550,000</p>
+                    <a href="listing.html?id=7" class="btn button">View Details</a>
+                </div>
+                <div class="property">
+                    <img src="./images/property8.jpg" alt="Property 8">
+                    <h2>Property 8</h2>
+                    <p>Location: Lorem ipsum dolor sit amet</p>
+                    <p>Price: $400,000</p>
+                    <a href="listing.html?id=8" class="btn button">View Details</a>
+                </div>
+                <div class="property">
+                    <img src="./images/property9.jpg" alt="Property 9">
+                    <h2>Property 9</h2>
+                    <p>Location: Lorem ipsum dolor sit amet</p>
+                    <p>Price: $750,000</p>
+                    <a href="listing.html?id=9" class="btn button">View Details</a>
+                </div>
+                <div class="property">
+                    <img src="./images/property10.jpg" alt="Property 10">
+                    <h2>Property 10</h2>
+                    <p>Location: Lorem ipsum dolor sit amet</p>
+                    <p>Price: $550,000</p>
+                    <a href="listing.html?id=10" class="btn button">View Details</a>
+                </div>
+                <div class="property">
+                    <img src="./images/property11.jpg" alt="Property 11">
+                    <h2>Property 11</h2>
+                    <p>Location: Lorem ipsum dolor sit amet</p>
+                    <p>Price: $650,000</p>
+                    <a href="listing.html?id=11" class="btn button">View Details</a>
+                </div>
+                <div class="property">
+                    <img src="./images/property12.jpg" alt="Property 12">
+                    <h2>Property 12</h2>
+                    <p>Location: Lorem ipsum dolor sit amet</p>
+                    <p>Price: $900,000</p>
+                    <a href="listing.html?id=12" class="btn button">View Details</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Real Estate Website. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+
+</html>

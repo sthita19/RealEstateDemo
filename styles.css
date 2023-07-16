@@ -1,0 +1,171 @@
+body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #0a63a4;
+    color: #fff;
+    padding: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    background-color: #0a63a4;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.button {
+    display: inline-block;
+    background-color: #ff5722;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #d84315;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+textarea {
+    height: 120px;
+}
+
+.sort-container {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.sort-container label {
+    margin-right: 5px;
+}
+
+.sort-container select {
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #555;
+}
+
+.sort-container select,
+.sort-container select option {
+    background-color: #fff;
+    color: #555;
+}
+
+.sort-container select:focus,
+.sort-container select:hover,
+.sort-container select:active {
+    border-color: #0a63a4;
+    outline: none;
+}
+
+.sort-container select:focus {
+    box-shadow: 0 0 0 2px rgba(10, 99, 164, 0.2);
+}
+
+.property-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -10px;
+}
+
+.property {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.property img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+@media screen and (min-width: 576px) {
+    .property {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .property {
+        flex: 0 0 33.3333%;
+        max-width: 33.3333%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        padding: 10px;
+    }
+
+    nav ul li a {
+        padding: 5px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    .container {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+}

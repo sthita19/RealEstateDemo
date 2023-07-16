@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listing Details - Real Estate Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1>Listing Details</h1>
+
+            <div id="listingDetails" class="property-details">
+                <!-- The listing details will be dynamically added here -->
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Real Estate Website. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function getListingDetails() {
+            // Get the listing ID from the query parameter
+            const urlParams = new URLSearchParams(window.location.search);
+            const listingId = urlParams.get('id');
+
+            // Get the listing details from the properties array (or fetch from the server/database)
+            const listing = properties.find(property => property.id === parseInt(listingId));
+
+            if (listing) {
+                // Create the listing details HTML
+                const listingHTML = `
+                    <img src="${listing.imgSrc}" alt="${listing.title}">
+                    <h2>${listing.title}</h2>
+                    <p>Location: ${listing.location}</p>
+                    <p>Price: ${listing.price}</p>
+                `;
+
+                // Insert the listing details HTML into the page
+                const listingDetails = document.getElementById('listingDetails');
+                listingDetails.innerHTML = listingHTML;
+            } else {
+                // Handle error if listing not found
+                const listingDetails = document.getElementById('listingDetails');
+                listingDetails.innerHTML = '<p>Listing not found.</p>';
+            }
+        }
+
+        // Call the function to load the listing details when the page loads
+        window.addEventListener('DOMContentLoaded', getListingDetails);
+    </script>
+</body>
+
+</html>
